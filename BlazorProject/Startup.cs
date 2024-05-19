@@ -1,4 +1,5 @@
 using BlazorProject.Data;
+using BlazorProject.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,7 @@ namespace BlazorProject
             services.AddSingleton<WeatherForecastService>();
             services.AddTransient<ProcessDemo>();
             services.AddTransient<Demo>();
+            services.AddTransient<IDemo, ProcessDemo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
