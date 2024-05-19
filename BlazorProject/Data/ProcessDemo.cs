@@ -1,12 +1,13 @@
-﻿using System;
+﻿using BlazorProject.Interface;
+using System;
 
 namespace BlazorProject.Data
 {
-    public class ProcessDemo
+    public class ProcessDemo : IDemo
     {
-        private readonly Demo _demo;
+        private readonly IDemo _demo;
 
-        public ProcessDemo(Demo demo)
+        public ProcessDemo(IDemo demo)
         {
             _demo = demo;
         }
@@ -29,6 +30,11 @@ namespace BlazorProject.Data
                 12 => 31,
                 _ => throw new IndexOutOfRangeException()
             };
+        }
+
+        public string GetName()
+        {
+            return "My name is process Demo";
         }
     }
 }
