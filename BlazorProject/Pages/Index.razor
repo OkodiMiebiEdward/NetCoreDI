@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject Demo _demo
 @inject ProcessDemo _processDemo
+@inject IDemo _testDemo
 
 <h1>Hello, world!</h1>
 
@@ -10,5 +11,6 @@
 </div>
 
 <h3>Days in month:@_processDemo.GetDaysInMonth()</h3>
+<h4>Get name:@_testDemo.GetName()</h4>
 
 <SurveyPrompt Title="How is Blazor working for you?" />
