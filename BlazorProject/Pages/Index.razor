@@ -1,11 +1,14 @@
 ﻿@page "/"
-@inject Demo demo
+@inject Demo _demo
+@inject ProcessDemo _processDemo
 
 <h1>Hello, world!</h1>
 
 <div>
     <p>Startup time</p>
-    <p>The startup time is @demo.StartupTime.ToString("hh:mm:ss ffffff")</p>
+    <p>The startup time is @_demo.StartupTime.ToString("hh:mm:ss ffffff")</p>
 </div>
+
+<h3>Days in month:@_processDemo.GetDaysInMonth()</h3>
 
 <SurveyPrompt Title="How is Blazor working for you?" />
