@@ -1,7 +1,11 @@
 ﻿@page "/"
+@inject Demo demo
 
 <h1>Hello, world!</h1>
 
-Welcome to your new app.
+<div>
+    <p>Startup time</p>
+    <p>The startup time is @demo.StartupTime.ToString("hh:mm:ss ffffff")</p>
+</div>
 
 <SurveyPrompt Title="How is Blazor working for you?" />
