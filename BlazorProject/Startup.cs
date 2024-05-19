@@ -23,6 +23,7 @@ namespace BlazorProject
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddTransient<ProcessDemo>();
             services.AddTransient<Demo>();
         }
 
